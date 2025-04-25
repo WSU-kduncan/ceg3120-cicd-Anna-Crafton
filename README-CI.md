@@ -16,8 +16,8 @@ Note: I already had an older version of docker installed for a previous project,
 To make sure everthing was working, I ran a pre-existing hello-world container. I used instructions from https://www.geeksforgeeks.org/docker-hello-world/, which had me
 pull the continer and then run it. 
 
-  'docker pull hello-world'
-  'docker run hello-world'
+  `docker pull hello-world`
+  `docker run hello-world`
 
 Once Docker was working, I ran the angular-site aplication that was given as part of the project. 
 
@@ -137,6 +137,9 @@ https://github.com/Anna-Crafton/crafton-project4-ceg3121/tree/main
 
 ## Stuff done after 4/25 
 
-Test push
+Test push with GitHub Desktop
 
-  
+# Correct DockerHub Link (from feedback on Porject 4)
+  https://hub.docker.com/r/acrafton21/crafton-ceg3120
+
+
