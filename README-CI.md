@@ -142,4 +142,12 @@ Test push with GitHub Desktop
 # Correct DockerHub Link (from feedback on Porject 4)
   https://hub.docker.com/r/acrafton21/crafton-ceg3120
 
+To build the image, In a directory with my Dockerfile and angular-site, I did
+ `docker build -t imageName .`
+
+ MEDIUM works, the problem was creating the dockerfile outside angular-site!  
+
+ 
+
+ 
 
