@@ -165,6 +165,11 @@ Settings at middle top right, (not the ones under profile, the ones just for the
 Entre a name. 
 Value for DOCKER_TOKEN is the Token password from earlier, and DOCKER_USERNAME is Dockerhub username.
 
+# Github > Docker Workflow How-To:
+
+Link to github page explainging workflows > https://docs.github.com/en/actions/writing-workflows/about-workflows 
+
+Make a .github/workflows folder with a YAML file in Github Repo.
 
 
 
