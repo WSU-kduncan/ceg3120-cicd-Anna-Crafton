@@ -147,7 +147,30 @@ To build the image, In a directory with my Dockerfile and angular-site, I did
 
  MEDIUM works, the problem was creating the dockerfile outside angular-site!  
 
- 
+# How to push image to DockerHub 
 
- 
+1) Login from the terminal (using a token)
+  `docker login` 
+2) Tag the image
+   `docker tag angular-docker acrafton21/crafton-ceg3120:latest`
+3) Push
+  `docker push acrafton21/crafton-ceg3120:latest`
+
+# Action Secret How to: 
+
+Created token same as before. 
+
+Settings at middle top right, (not the ones under profile, the ones just for the repo)
+'secrets and variabes' tab on the bottom left, then 'Actions' > new repository secret. 
+Entre a name. 
+Value for DOCKER_TOKEN is the Token password from earlier, and DOCKER_USERNAME is Dockerhub username.
+
+
+
+
+
+
+
+
+
 
