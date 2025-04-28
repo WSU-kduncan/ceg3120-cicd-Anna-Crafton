@@ -168,12 +168,20 @@ Value for DOCKER_TOKEN is the Token password from earlier, and DOCKER_USERNAME i
 # Github > Docker Workflow How-To:
 
 Link to github page explainging workflows > https://docs.github.com/en/actions/writing-workflows/about-workflows 
-I used Project 4 Sample Workflows as a base for the file. 
+https://dev.to/ken_mwaura1/automate-docker-image-builds-and-push-to-docker-hub-using-github-actions-32g5 
 
 Make a .github/workflows folder with a .yml file in Github Repo.
 
-`name: Build and Push to Docker` 
-name for the file
+
+
+Actions > click on the job name > rerun job to see if it works.
+
+
+
+
+
+
+
 
 
 
