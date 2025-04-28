@@ -1,6 +1,6 @@
 
 #The name of your workflow that'll be displayed in the Actions tab
-name: Hello-World-Actions
+name: Build and Push to Docker
 
 # Events that control when the action will run.
 on:
