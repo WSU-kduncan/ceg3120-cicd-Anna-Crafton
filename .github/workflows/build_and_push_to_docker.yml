@@ -15,6 +15,10 @@ on:
 #env:
   # variable holding my repo folder name (using DockerHub is assumed)
   #DOCKER_HUB_REPO: mysite
+
+  workflow_dispatch: 
+#added line so i can run it from github actions to test
+  
 # jobs - each jobs runs on a runner - parralel by deafult, can be dependent based on id
 #     https://docs.github.com/en/actions/learn-github-actions/workflow-syntax-for-github-actions#jobs
 jobs:
