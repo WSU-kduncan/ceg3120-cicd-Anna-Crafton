@@ -168,8 +168,15 @@ Value for DOCKER_TOKEN is the Token password from earlier, and DOCKER_USERNAME i
 # Github > Docker Workflow How-To:
 
 Link to github page explainging workflows > https://docs.github.com/en/actions/writing-workflows/about-workflows 
+I used Project 4 Sample Workflows as a base for the file. 
 
-Make a .github/workflows folder with a YAML file in Github Repo.
+Make a .github/workflows folder with a .yml file in Github Repo.
+
+`name: Build and Push to Docker` 
+name for the file
+
+
+
 
 
 
