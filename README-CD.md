@@ -79,14 +79,22 @@ This was fixed by adding myself to the docker group using `$ sudo usermod -aG do
 Once I had confirmed everthing was working, I pulled my image. 
 
 To set up the angular aplication, I did the following:
+
 `sudo apt install npm' to install npm
 
-'npm install -g @angular/cli` to install angular
+'sudo npm install -g @angular/cli` to install angular (I am not sure if this worked, since it threw a bunch of error but everything seems to be working ok otherwise) 
 
-`ng new angular-docker` to make a new angular aplication
+`ng new angular-docker` to make a new angular aplication, and selected y at any prompts. 
+
+I then created a new Dockerfile, copied the contents of the one from my github into it, and did `ng serve` from the same diectory as I added the Dockerfile to to run it. 
+
+![image](https://github.com/user-attachments/assets/f031942f-6ee9-434a-a190-c677ccaf1fcb)
 
 
-I then created a new Dockerfile, copied the contents of the one from my github into it, and did `ng serve` from the same diectory as the Dockerfile to run it. 
+
+
+
+
 
 
 
