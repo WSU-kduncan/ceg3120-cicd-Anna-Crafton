@@ -12,8 +12,7 @@ name: Docker-Login-Build-Push
 #triggers on new version
 on:
   push:
-    tags:
-      -v0.*
+    branches: [main]
 
 env:
   # variable holding my repo folder name (using DockerHub is assumed)
