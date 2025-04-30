@@ -44,8 +44,7 @@ I added `Tag: - '*'` under `push:` to have it trigger when any tag is added, and
 
 Link > https://docs.github.com/en/actions/writing-workflows/choosing-what-your-workflow-does/accessing-contextual-information-about-workflow-runs#github-context 
 
-To get the docker version to update to the same version as my github repo, I used github.ref_name as the tag. 
-
+To get the docker version to update to the same version as my github repo, I used github.ref_name as the tag instead of my TAG variable. 
 
 
 
