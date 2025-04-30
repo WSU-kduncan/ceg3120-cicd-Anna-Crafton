@@ -46,6 +46,23 @@ Link > https://docs.github.com/en/actions/writing-workflows/choosing-what-your-w
 
 To get the docker version to update to the same version as my github repo, I used github.ref_name as the tag instead of my TAG variable. 
 
+I had issues formatting the tag / removing the patch and minor versions from the string. I used %.*, but I belive the formatting was incorrect. 
+
+So the workflow will update dockerhub with patches and with latest, but not with a major only or major minor version. 
+
+## Part 2
+
+# EC2 Setup: 
+
+EC2 > Launch EC2 > Select Amazon Server > t2micro > Select a key > change the voume to 30 GB > click launch.
+
+I did not change the security groups, since it already allowed SSH.
+
+I downloaded the ssh public key from aws, chmod 700, and used it to ssh into my instance. 
+
+
+
+
 
 
 
