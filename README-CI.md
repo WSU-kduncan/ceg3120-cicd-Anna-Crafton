@@ -172,9 +172,14 @@ https://dev.to/ken_mwaura1/automate-docker-image-builds-and-push-to-docker-hub-u
 
 Make a .github/workflows folder with a .yml file in Github Repo.
 I coppied one of the example workflows from the project 4 folder, and changed the repo to my repo and the branch name to main. 
-Actions > click on the job name > rerun job to see if it works.\
 
-I got an error saying "push access denied, repository does not exist or may require authorization: server message: insufficient_scope: authorization failed" 
+I got an error saying "push access denied, repository does not exist or may require authorization: server message: insufficient_scope: authorization failed"
+I fixed it by chaging the repo name variable to not include my username. 
+
+Actions > click on the job name > rerun job to see if it works.
+
+![image](https://github.com/user-attachments/assets/095b4e43-d564-4cc7-ab69-7b92c13be704)
+
 
 
 
