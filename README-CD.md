@@ -13,7 +13,7 @@ Patch - backwards compatable bugs fixes
 
 Patch and Minor reset to zero when a number before them changes. 
 
-# Tag How-To 
+# Tag How-To:
 
 https://git-scm.com/book/en/v2/Git-Basics-Tagging > Link to Article explaining `git tag` commands. 
 
@@ -27,6 +27,10 @@ and got a new tag message.
 
 ![image](https://github.com/user-attachments/assets/57922780-9f4a-41e6-bdff-3d7db263995c)
 
+# Workflow Tags How-To:
+
+
+Link to workflow > https://github.com/WSU-kduncan/ceg3120-cicd-Anna-Crafton/blob/main/.github/workflows/build_and_push_to_docker.yml
 
 
 
