@@ -60,6 +60,12 @@ I did not change the security groups, since it already allowed SSH.
 
 I downloaded the ssh public key from aws, chmod 700, and used it to ssh into my instance. 
 
+How-To install docker on EC2 instance: 
+`sudo apt update`
+'sudo apt install docker.io` 
+
+
+
 
 
 
