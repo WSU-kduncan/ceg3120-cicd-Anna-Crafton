@@ -38,7 +38,10 @@ So now it pushes both latest and whatever version is hardcoded into TAG to Docke
 
 ![image](https://github.com/user-attachments/assets/09a958a8-ba18-482f-ba80-08a7a500455f)
 
-I changed the trigger from `push` to `published` to run when tags are updated. 
+I changed the trigger from `push` to `published` to run when tags are updated. (this did not work)
+I changed the trigger to only on versions 0, to see if it would work when i updated the version to 0.0.2. (this worked)
+I changed it to trigger for -v* tags, which should be all of them. 
+
 
 
 
