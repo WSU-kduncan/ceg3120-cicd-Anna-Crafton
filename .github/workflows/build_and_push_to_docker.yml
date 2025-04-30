@@ -11,8 +11,8 @@ name: Docker-Login-Build-Push
 # event trigger(s)
 #triggers on new version
 on:
-  push:
-    branches: [main]
+  release:
+    types: [published]
 
 env:
   # variable holding my repo folder name (using DockerHub is assumed)
