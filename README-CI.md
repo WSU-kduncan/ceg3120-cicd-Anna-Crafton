@@ -171,10 +171,9 @@ Link to github page explainging workflows > https://docs.github.com/en/actions/w
 https://dev.to/ken_mwaura1/automate-docker-image-builds-and-push-to-docker-hub-using-github-actions-32g5 
 
 Make a .github/workflows folder with a .yml file in Github Repo.
-
-
-
+I coppied one of the example workflows from the project 4 folder, and changed the repo to my repo and the branch name to main. 
 Actions > click on the job name > rerun job to see if it works.
+
 
 
 
