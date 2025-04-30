@@ -80,8 +80,11 @@ Once I had confirmed everthing was working, I pulled my image.
 
 To set up the angular aplication, I did the following:
 `sudo apt install npm' to install npm
+
 'npm install -g @angular/cli` to install angular
+
 `ng new angular-docker` to make a new angular aplication
+
 
 I then created a new Dockerfile, copied the contents of the one from my github into it, and did `ng serve` from the same diectory as the Dockerfile to run it. 
 
