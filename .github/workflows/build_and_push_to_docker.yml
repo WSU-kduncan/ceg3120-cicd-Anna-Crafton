@@ -20,8 +20,6 @@ env:
   # variable holding my repo folder name (using DockerHub is assumed)
   DOCKER_HUB_REPO: crafton-ceg3120
   TAG: ${{github.ref_name}}
-  MINOR_TAG: ${{ env.DOCKER_HUB_REPO }}:${TAG%.*}
-  MAJOR_TAG: ${{ env.DOCKER_HUB_REPO }}:${MINOR_TAG%.*}
 
 jobs:
 
