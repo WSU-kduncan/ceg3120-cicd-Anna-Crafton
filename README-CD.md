@@ -42,6 +42,11 @@ I changed the trigger from `push` to `published` to run when tags are updated. (
 I added `Tag: - '*'` under `push:` to have it trigger when any tag is added, and tested it by pushing several tags and some pushes wihtout tags. 
 
 
+Link > https://docs.github.com/en/actions/writing-workflows/choosing-what-your-workflow-does/accessing-contextual-information-about-workflow-runs#github-context 
+
+To get the docker version to update to the same version as my github repo, I used github.ref_name as the tag. 
+
+
 
 
 
