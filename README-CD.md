@@ -68,13 +68,14 @@ I confirmed docker was installed by doing `docker --version`
 
 ![image](https://github.com/user-attachments/assets/bce011b8-44ea-4115-9d2f-db994de74a65)
 
-https://mahira-technology.medium.com/a-step-by-step-guide-to-deploy-docker-containers-on-aws-ec2-instance-296eef5ed7e0 > Link
-
-`docker -info` to check status gave me an error. 
+To confirm that everthing was working, I attempted to run docker's hello-world image. I was initally unable to pull it. Doing `docker -info` to check status gave me an error. 
 
 ![image](https://github.com/user-attachments/assets/61ce200b-b1ed-4efb-a965-7a83c0a91500)
 
-which I fixed by adding myself to the docker group using `$ sudo usermod -aG docker ubuntu` as sugjested here (https://www.howtogeek.com/devops/how-to-troubleshoot-cannot-connect-to-the-docker-daemon-errors/#permissions-issues) 
+This was fixed by adding myself to the docker group using `$ sudo usermod -aG docker ubuntu` as sugjested here (https://www.howtogeek.com/devops/how-to-troubleshoot-cannot-connect-to-the-docker-daemon-errors/#permissions-issues), and I was able to run the hello-world image. 
+
+![image](https://github.com/user-attachments/assets/9de41173-e646-4d68-bcbf-154a5d4396cc)
+
 
 
 
