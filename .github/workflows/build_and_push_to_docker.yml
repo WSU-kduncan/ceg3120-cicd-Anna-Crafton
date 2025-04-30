@@ -14,7 +14,7 @@ on:
 # variables used in this workflow
 env:
   # variable holding my repo folder name (using DockerHub is assumed)
-  DOCKER_HUB_REPO: acrafton21/crafton-ceg3120
+  DOCKER_HUB_REPO: crafton-ceg3120
 # jobs - each jobs runs on a runner - parralel by deafult, can be dependent based on id
 #     https://docs.github.com/en/actions/learn-github-actions/workflow-syntax-for-github-actions#jobs
 jobs:
