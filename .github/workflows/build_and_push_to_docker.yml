@@ -51,8 +51,7 @@ jobs:
         id: docker_build 
         uses: docker/build-push-action@v2
         with:
-          #push: true
-          tag_with_ref: true
           push: true
-          #tags: ${{ secrets.DOCKER_USERNAME }}/${{ env.DOCKER_HUB_REPO }}:latest,
-           #     ${{ secrets.DOCKER_USERNAME }}/${{ env.DOCKER_HUB_REPO }}:${{env.TAG}}
+          tags: ${{ secrets.DOCKER_USERNAME }}/${{ env.DOCKER_HUB_REPO }}:latest,
+                ${{ secrets.DOCKER_USERNAME }}/${{ env.DOCKER_HUB_REPO }}:${{env.TAG}},
+                ${{ secrets.DOCKER_USERNAME }}/${{ env.DOCKER_HUB_REPO }}:${{github.ref_name}}
