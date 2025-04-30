@@ -91,7 +91,7 @@ I then created a new Dockerfile, copied the contents of the one from my github i
 ![image](https://github.com/user-attachments/assets/f031942f-6ee9-434a-a190-c677ccaf1fcb)
 
 
-
+## Part 2 points 3 - end are not completed! 
 
 
 
