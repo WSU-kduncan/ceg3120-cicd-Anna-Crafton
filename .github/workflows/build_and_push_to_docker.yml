@@ -20,6 +20,8 @@ env:
   # variable holding my repo folder name (using DockerHub is assumed)
   DOCKER_HUB_REPO: crafton-ceg3120
   TAG: ${{github.ref_name}}
+  MINOR_TAG: ${{ env.DOCKER_HUB_REPO }}:${TAG%.*}
+  MAJOR_TAG: ${{ env.DOCKER_HUB_REPO }}:${MINOR_TAG%.*}
 
 jobs:
 
@@ -54,5 +56,5 @@ jobs:
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/${{ env.DOCKER_HUB_REPO }}:latest,
                 ${{ secrets.DOCKER_USERNAME }}/${{ env.DOCKER_HUB_REPO }}:${{github.ref_name}},
-                ${{ secrets.DOCKER_USERNAME }}/${{ env.DOCKER_HUB_REPO }}:${TAG%/*}
+                ${{ secrets.DOCKER_USERNAME }}/${{ env.DOCKER_HUB_REPO }}:${TAG%.*}
                 
