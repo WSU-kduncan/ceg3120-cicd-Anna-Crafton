@@ -14,7 +14,7 @@ name: Docker-Login-Build-Push
 on:
   push:
     tags:
-      - v0.**
+      - '*'
 
 env:
   # variable holding my repo folder name (using DockerHub is assumed)
