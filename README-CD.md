@@ -32,6 +32,14 @@ and got a new tag message.
 
 Link to workflow > https://github.com/WSU-kduncan/ceg3120-cicd-Anna-Crafton/blob/main/.github/workflows/build_and_push_to_docker.yml
 
+I created a workflow variable called `TAG` and added a second docker image tag to the tags array at the end of the workflow file. 
+So now it pushes both latest and whatever version is hardcoded into TAG to DockerHub. I confirmed this by triggering the workflow and then checking DockerHub. 
+
+![image](https://github.com/user-attachments/assets/09a958a8-ba18-482f-ba80-08a7a500455f)
+
+
+
+
 
 
 
