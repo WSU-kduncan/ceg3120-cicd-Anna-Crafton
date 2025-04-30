@@ -1,5 +1,6 @@
 ####
 # Created from:
+# Project 4 Example Workflows!! 
 # https://github.com/docker/build-push-action
 # https://docs.docker.com/ci-cd/github-actions/
 ####
@@ -16,6 +17,7 @@ on:
 env:
   # variable holding my repo folder name (using DockerHub is assumed)
   DOCKER_HUB_REPO: crafton-ceg3120
+  TAG: 0.0.1 #Flag tag for testing if this works
 
 jobs:
 
@@ -48,5 +50,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/${{ env.DOCKER_HUB_REPO }}:latest
+          tags: ${{ secrets.DOCKER_USERNAME }}/${{ env.DOCKER_HUB_REPO }}:latest,
+                ${{ secrets.DOCKER_USERNAME }}/${{ env.DOCKER_HUB_REPO }}:${{env.TAG}}
+          
       
