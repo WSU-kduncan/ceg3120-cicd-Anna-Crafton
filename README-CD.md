@@ -23,6 +23,12 @@ and confirmed that it worked by doing `git tag -l' to see a list of tags.
 ![image](https://github.com/user-attachments/assets/2f97f6b4-7514-4713-b4e7-b397817fa92a)
 
 Then I pushed the tag using `git push origin v0.0.0`
+and got a new tag message. 
+
+![image](https://github.com/user-attachments/assets/57922780-9f4a-41e6-bdff-3d7db263995c)
+
+
+
 
 
 
