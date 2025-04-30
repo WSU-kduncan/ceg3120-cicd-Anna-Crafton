@@ -53,13 +53,6 @@ jobs:
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/${{ env.DOCKER_HUB_REPO }}:latest,
                 ${{ secrets.DOCKER_USERNAME }}/${{ env.DOCKER_HUB_REPO }}:${{env.TAG}}
+                ${{ secrets.DOCKER_USERNAME }}/${{ env.DOCKER_HUB_REPO }}:${{ github.ref_name }}
 
-
-# test 
-      - name: Set env
-        run: echo "RELEASE_VERSION=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
-      - name: Test
-        run: |
-          echo $RELEASE_VERSION
-          echo ${{ env.RELEASE_VERSION }}
       
