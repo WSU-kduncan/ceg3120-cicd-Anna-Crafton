@@ -39,12 +39,7 @@ So now it pushes both latest and whatever version is hardcoded into TAG to Docke
 ![image](https://github.com/user-attachments/assets/09a958a8-ba18-482f-ba80-08a7a500455f)
 
 I changed the trigger from `push` to `published` to run when tags are updated. (this did not work)
-I changed the trigger to only on versions 0, to see if it would work when i updated the version to 0.0.2. (this worked)
-I changed it to trigger for -v* tags, which should be all of them. (this worked)
-To check if it was only updating for new versions, I pushed without changing the git tag. (this worked) 
-
-It only worked the first time. All following pushes of different versions did not trigger the workflow, so I reset the file to the last working version and tried again. 
-
+I added `Tag: - '*'` under `push:` to have it trigger when any tag is added, and tested it by pushing several tags and some pushes wihtout tags. 
 
 
 
