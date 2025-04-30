@@ -15,6 +15,6 @@ Patch and Minor reset to zero when a number before them changes.
 
 # Tag How-To 
 
-I taged a first git commit with `git tag -a v0.0.0`
+I taged a first git commit with `git tag -a v0.0.0 -m "first tag"`
 
 
