@@ -52,6 +52,6 @@ jobs:
         with:
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/${{ env.DOCKER_HUB_REPO }}:latest,
-                ${{ secrets.DOCKER_USERNAME }}/${{ env.DOCKER_HUB_REPO }}:${{github.ref_name}}
+                ${{ secrets.DOCKER_USERNAME }}/${{ env.DOCKER_HUB_REPO }}:${{github.ref_name}},
                 ${{ secrets.DOCKER_USERNAME }}/${{ env.DOCKER_HUB_REPO }}:${{github.ref_name}%/*}
                 
