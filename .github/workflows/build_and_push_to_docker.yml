@@ -52,7 +52,5 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          # tags: ${{ secrets.DOCKER_USERNAME }}/${{ env.DOCKER_HUB_REPO }}:latest
-          # Example getting fancy with tags: 
-          #   https://github.com/docker/build-push-action/blob/master/docs/advanced/tags-labels.md
-          tag_with_ref: true # added for taging
+          tags: ${{ secrets.DOCKER_USERNAME }}/${{ env.DOCKER_HUB_REPO }}:latest
+      
