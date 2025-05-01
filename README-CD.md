@@ -13,7 +13,7 @@ Patch - backwards compatable bugs fixes
 
 Patch and Minor reset to zero when a number before them changes. 
 
-# Tag How-To:
+# Taging How-To:
 
 https://git-scm.com/book/en/v2/Git-Basics-Tagging > Link to Article explaining `git tag` commands. 
 
@@ -27,28 +27,35 @@ and got a new tag message.
 
 ![image](https://github.com/user-attachments/assets/57922780-9f4a-41e6-bdff-3d7db263995c)
 
+`git tag` will list all the tags in a repo. 
+
 # Workflow Tags How-To:
 
-
+Sources: 
 Link to workflow > https://github.com/WSU-kduncan/ceg3120-cicd-Anna-Crafton/blob/main/.github/workflows/build_and_push_to_docker.yml
-https://docs.github.com/en/actions/writing-workflows/choosing-when-your-workflow-runs/events-that-trigger-workflows > link to article with workflow triggers 
+Link to article with a list of workflow triggers > https://docs.github.com/en/actions/writing-workflows/choosing-when-your-workflow-runs/events-that-trigger-workflows
+Link to article on how to acess github info from a workflow >  https://docs.github.com/en/actions/writing-workflows/choosing-what-your-workflow-does/accessing-contextual-information-about-workflow-runs#github-context 
 
-I created a workflow variable called `TAG` and added a second docker image tag to the tags array at the end of the workflow file. 
-So now it pushes both latest and whatever version is hardcoded into TAG to DockerHub. I confirmed this by triggering the workflow and then checking DockerHub. 
+I was able to get the workflow to tag and push the docker image with the same tag I pushed to github by retriving the github tag with ` github.ref_name`, and then pushing it to docker. I also pushed the latest version. 
 
-![image](https://github.com/user-attachments/assets/09a958a8-ba18-482f-ba80-08a7a500455f)
+Stuff I tried: 
 
-I changed the trigger from `push` to `published` to run when tags are updated. (this did not work)
-I added `Tag: - '*'` under `push:` to have it trigger when any tag is added, and tested it by pushing several tags and some pushes wihtout tags. 
+  I created a workflow variable called `TAG` and added a second docker image tag to the tags array at the end of the workflow file. 
+  So now it pushes both latest and whatever version is hardcoded into TAG to DockerHub. I confirmed this by triggering the workflow and then checking DockerHub. 
+  
+  ![image](https://github.com/user-attachments/assets/09a958a8-ba18-482f-ba80-08a7a500455f)
+  
+  I changed the trigger from `push` to `published` to run when tags are updated. (this did not work)
 
+  
+  I added `Tag: - '*'` under `push:` to have it trigger when any tag is added, and tested it by pushing several tags and some pushes wihtout tags. 
+  
+  
+  To get the docker version to update to the same version as my github repo, I used github.ref_name as the tag instead of my TAG variable. 
+  
+  I had issues formatting the tag / removing the patch and minor versions from the string. I used `%.*` to try and remove all the charaters after the last `.` in the version string, but I belive the formatting was incorrect. 
 
-Link > https://docs.github.com/en/actions/writing-workflows/choosing-what-your-workflow-does/accessing-contextual-information-about-workflow-runs#github-context 
-
-To get the docker version to update to the same version as my github repo, I used github.ref_name as the tag instead of my TAG variable. 
-
-I had issues formatting the tag / removing the patch and minor versions from the string. I used %.*, but I belive the formatting was incorrect. 
-
-So the workflow will update dockerhub with patches and with latest, but not with a major only or major minor version. 
+  * The workflow will update dockerhub with major.minor.patch versions and with latest, but not with a major only or major minor version as requested in the instructions. * 
 
 ## Part 2
 
