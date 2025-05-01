@@ -11,7 +11,7 @@ Ubuntu was used to connect to the server.
 # Stuff that is not working. 
 
 I had trouble getting Angular installed on the EC2 Instance.
-It has docker and nodejs installed and is able to run dockers hello-world image, but since my image needs angular to run it does not work.  
+It has docker and nodejs installed and is able to run dockers hello-world image, but since my image needs angular to run it does not work on the instance. 
 
 
 # Resources Used
