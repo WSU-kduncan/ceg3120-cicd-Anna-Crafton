@@ -67,11 +67,11 @@ I had issues formatting the tag / removing the patch and minor versions from the
 
 # Notes on Workflow: 
   
-    The vast majority of the workflow file is from the example workflow file. 
+  The vast majority of the workflow file is from the example workflow file. 
   
-    # Notes / Explanation of Workflow are not done!
+  # Notes / Explanation of Workflow are not done!
     
-    Link to workflow > https://github.com/WSU-kduncan/ceg3120-cicd-Anna-Crafton/blob/main/.github/workflows/build_and_push_to_docker.yml
+  Link to workflow > https://github.com/WSU-kduncan/ceg3120-cicd-Anna-Crafton/blob/main/.github/workflows/build_and_push_to_docker.yml
 
 ## Part 2
 
@@ -90,23 +90,33 @@ I had issues formatting the tag / removing the patch and minor versions from the
 
 
 # Notes on EC2: 
-  
-    I did not change the security groups, since they already allowed SSH. 
-  
-    
-    I lost my original key file, but was able to download a new ssh public key from aws. To use it, I did `chmod 700` to change the permisions, 
-    then `ssh -i lab5Key.pem ubuntu@35.172.190.12` to acess the instance. 
+
+  AMI Version: ubuntu/images/hvm-ssd-gp3/ubuntu-noble-24.04-amd64-server-20250305
+  AMI ID: ami-084568db4383264d4
+  Linux / Unix
+
+  I also allocated an Elastic IP Adress to the instance to make it easier to SSH into. 
+
+  Security Groups: 
+  The security group has one default rule, alowing inbound TCP / SSH connections to port 22. I left this rule because I needed to SSH into the server.
+  It also has one default outbound rule, allowing all outbound traffic. I left this rule since I wanted to be able see what the server was doing from outside of it. 
+  I added a rule allowing HTTP connections to port 80, since I wanted to be able to connect to and view the image I intend to run on it. 
+
+
+  I lost my original key file, but was able to download a new ssh public key from aws. To use it, I did `chmod 700` to change the permisions, 
+  then `ssh -i lab5Key.pem ubuntu@IPADRESS` to acess the instance. 
+
+
 
 # How-To install Docker on EC2 Instance: 
     
-    1) Do `sudo apt update` to update everything to the point where stuff actually works. (this took several minutes, but could have been terrible wifi) 
-    2) 'sudo apt install docker.io` to install docker.
-    3) Make sure docker is actually installed by doing `docker --version`. (this should display a version number if it worked) 
+  1) Do `sudo apt update` to update everything to the point where stuff actually works. (this took several minutes, but could have been terrible wifi) 
+  2) 'sudo apt install docker.io` to install docker.
+  3) Make sure docker is actually installed by doing `docker --version`. (this should display a version number if it worked) 
   
-       ![image](https://github.com/user-attachments/assets/bce011b8-44ea-4115-9d2f-db994de74a65)
+  ![image](https://github.com/user-attachments/assets/bce011b8-44ea-4115-9d2f-db994de74a65)
 
-# How-To Run an Image: 
-
+# How-To set up an Image: 
 
   To confirm that everthing was working, I attempted to run docker's hello-world image. (same as in project 4) I was initally unable to pull it. Doing `docker -info` to check status gave me an error. 
     
@@ -135,7 +145,11 @@ To set up an angular aplication, I did the following:
   
     
   ![image](https://github.com/user-attachments/assets/f031942f-6ee9-434a-a190-c677ccaf1fcb)
-  
+
+# How-To Run an Image:
+
+
+
 
 ## Part 2 points 3 - end are not completed! 
 
