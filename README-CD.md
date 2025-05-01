@@ -32,11 +32,21 @@ and got a new tag message.
 # Workflow Tags How-To:
 
 Sources: 
-Link to workflow > https://github.com/WSU-kduncan/ceg3120-cicd-Anna-Crafton/blob/main/.github/workflows/build_and_push_to_docker.yml
-Link to article with a list of workflow triggers > https://docs.github.com/en/actions/writing-workflows/choosing-when-your-workflow-runs/events-that-trigger-workflows
-Link to article on how to acess github info from a workflow >  https://docs.github.com/en/actions/writing-workflows/choosing-what-your-workflow-does/accessing-contextual-information-about-workflow-runs#github-context 
 
-I was able to get the workflow to tag and push the docker image with the same tag I pushed to github by retriving the github tag with ` github.ref_name`, and then pushing it to docker. I also pushed the latest version. 
+  
+  Link to workflow > https://github.com/WSU-kduncan/ceg3120-cicd-Anna-Crafton/blob/main/.github/workflows/build_and_push_to_docker.yml
+  
+  
+  Link to article with a list of workflow triggers > https://docs.github.com/en/actions/writing-workflows/choosing-when-your-workflow-runs/events-that-trigger-workflows
+  
+  
+  Link to article on how to acess github info from a workflow >  https://docs.github.com/en/actions/writing-workflows/choosing-what-your-workflow-does/accessing-contextual-information-about-workflow-runs#github-context 
+
+
+Summery: 
+
+  I was able to get the workflow to tag and push the docker image with the same tag I pushed to github by retriving the github tag with ` github.ref_name`, and then pushing it to docker. I also pushed the latest version. The workflow will update dockerhub with major.minor.patch versions and with latest, but not with a major only or major minor version as requested in the instructions. 
+
 
 Stuff I tried: 
 
@@ -55,7 +65,6 @@ Stuff I tried:
   
   I had issues formatting the tag / removing the patch and minor versions from the string. I used `%.*` to try and remove all the charaters after the last `.` in the version string, but I belive the formatting was incorrect. 
 
-  * The workflow will update dockerhub with major.minor.patch versions and with latest, but not with a major only or major minor version as requested in the instructions. * 
 
 ## Part 2
 
