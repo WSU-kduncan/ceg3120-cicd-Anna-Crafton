@@ -6,8 +6,7 @@ This GitHub repo uses a workflow file to push images to DockerHub whenever it is
 I used AWS to host an EC2 Instance to run an image from. 
 Ubuntu was used to connect to the server. 
 
-Diagram of project
-[If applicable] What is not working in this project
+# Missing Diagram of Project
 
 # Stuff that is not working. 
 
