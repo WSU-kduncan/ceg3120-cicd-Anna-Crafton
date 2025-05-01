@@ -152,13 +152,34 @@ Issue with AWS, resolved by turning it off and back on agian. It would crash any
 
   ![image](https://github.com/user-attachments/assets/e3c2debd-4075-4dc2-9497-01232b49cdd0)
   
-
-I had issues installing angular without root permisions. (this has yet to be resolved) 
-
 Hypotheticly, if it was working, I could connect on a browser with `http://35.168.96.231:4200` which is the instance IP ad the port number the image is running on. 
 
-
 ## Part 2 points 3 - end are not completed! 
+
+# How to Install Webhooks: (point 5)
+
+Sources: 
+
+ Link to adnanh webhook repo > https://github.com/adnanh/webhook 
+
+Since I am using a ubuntu server, I installed webhooks with `sudo apt-get install webhook`
+
+
+ I created a file called hooks.json with touch, then pasted the text from adnanh's instrucions into te file. 
+ 
+```
+[
+  {
+    "id": "redeploy-webhook",
+    "execute-command": "/var/scripts/redeploy.sh",
+    "command-working-directory": "/var/webhook"
+  }
+]
+```
+
+`go mod init webhook` to set up go.
+`go get github.com/adnanh/webhook`
+`go build github.com/adnanh/webhook`
 
 
 
