@@ -146,9 +146,16 @@ To set up an angular aplication, I did the following:
     
   ![image](https://github.com/user-attachments/assets/f031942f-6ee9-434a-a190-c677ccaf1fcb)
 
-# How-To Run an Image:
 
 
+Issue with AWS, resolved by turning it off and back on agian. It would crash anytime I did `ng serve` if I tried to ssh into the server from a second terminal. 
+
+  ![image](https://github.com/user-attachments/assets/e3c2debd-4075-4dc2-9497-01232b49cdd0)
+  
+
+I had issues installing angular without root permisions. (this has yet to be resolved) 
+
+Hypotheticly, if it was working, I could connect on a browser with `http://35.168.96.231:4200` which is the instance IP ad the port number the image is running on. 
 
 
 ## Part 2 points 3 - end are not completed! 
