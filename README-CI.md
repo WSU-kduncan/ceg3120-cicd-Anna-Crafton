@@ -97,7 +97,7 @@ I created a repository by logining in to DockerHub, clicking on 'Repositories' o
 
 I used DockerHub's instructions for making a Public Acess Key. (https://docs.docker.com/security/for-developers/access-tokens/)
 
-How to Create a Token: 
+# How to Create a Token: 
 
   1) Avatar (in top right) > Account Settings > Personal Acess Tokens > Generate New Token
      
@@ -107,7 +107,7 @@ How to Create a Token:
        
   4) COPY THE TOKEN AND SAVE IT! It will dissapear once the page is closed. 
 
-How to Use a Token to Push an Image to DockerHub:
+# How to Use a Token to Push an Image to DockerHub:
 
   1) In a terminal, do docker login -u USERNAME, and enter the token password when prompted.
 
@@ -221,6 +221,9 @@ tags:
 
 'Build and Push' is a step that calls a docker action to build and push the image to DockerHub, and sends it the perameters `push:` and `tags:`.
 ` ${{ secrets.DOCKER_USERNAME }}/${{ env.DOCKER_HUB_REPO }}:${{github.ref_name}}` is a variable string that is assigned to the tag peremeter. It uses a docker secret contianing my username, '/', a enviormental vairable with my repo name, and the tag that has just been pushed to the github repo. 
+
+
+To use the workflow in a diffeerent github repo, you would need to set new github action secrets with the same variable names (DOKCER_USERNAME, DOCKER_TOKEN). To push to a different DOckerhub repo, you would need to change the value of DOCKER_HUB_REPO in the workflow  to the name of the new dokcerhub repo.
 
 # Link to Workflow 
 https://github.com/WSU-kduncan/ceg3120-cicd-Anna-Crafton/blob/main/.github/workflows/build_and_push_to_docker.yml 
