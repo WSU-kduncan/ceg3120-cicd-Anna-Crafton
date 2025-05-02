@@ -137,15 +137,11 @@ https://github.com/Anna-Crafton/crafton-project4-ceg3121/tree/main
 
 ## Stuff done after 4/25 
 
-Test push with GitHub Desktop
-
 # Correct DockerHub Link (from feedback on Porject 4)
   https://hub.docker.com/r/acrafton21/crafton-ceg3120
 
 To build the image, In a directory with my Dockerfile and angular-site, I did
  `docker build -t imageName .`
-
- MEDIUM works, the problem was creating the dockerfile outside angular-site!  
 
 # How to push image to DockerHub 
 
@@ -163,6 +159,7 @@ Created token same as before.
 Settings at middle top right, (not the ones under profile, the ones just for the repo)
 'secrets and variabes' tab on the bottom left, then 'Actions' > new repository secret. 
 Entre a name. 
+
 Value for DOCKER_TOKEN is the Token password from earlier, and DOCKER_USERNAME is Dockerhub username.
 
 # Github > Docker Workflow How-To:
@@ -176,7 +173,65 @@ I coppied one of the example workflows from the project 4 folder, and changed th
 I got an error saying "push access denied, repository does not exist or may require authorization: server message: insufficient_scope: authorization failed"
 I fixed it by chaging the repo name variable to not include my username. 
 
-Actions > click on the job name > rerun job to see if it works.
+# Workflow Explanation 
+
+The workflow builds and pushes an image to Dockerhub whenever a new tag is pushed to github. 
+
+'name:' is what shows up in the actions tab 
+
+The next few lines tell the workflow to trigger when any new tag is pushed to github. 
+
+```
+on:
+push:
+tags: 
+-'*' 
+```
+
+`env:' lists enviorment variables to be used later, which in my case is only my DockerHub repo name. 
+
+
+'jobs:` indicates the start of a list of jobs for the workflow to do.
+
+
+'build_and_push` is how the workflow identifies the job.
+
+
+'name:' is how the job shows up in the actions tab.
+
+
+`runs-on: ubuntu-latest` lists the type of runner used.
+
+
+`steps:` lists a bunch of smaller pieces in the job. 
+
+
+'Checkout repo to runner' is a step that calls an action to clone the repo to the runner.
+
+
+'Set up Docker Buildx' is a step that calls an action to set up Buildex, which helps with Docker.
+
+
+'Login to DockerHub' is a step that uses github secrets to login to DockerHub.
+
+
+`with:` lets the action listed after `uses:` be sent the secret variables containing my username and token.
+`username:` and 'password:` are perameter names.
+
+
+'Build and Push' is a step that calls a docker action to build and push the image to DockerHub, and sends it the perameters `push:` and `tags:`.
+` ${{ secrets.DOCKER_USERNAME }}/${{ env.DOCKER_HUB_REPO }}:${{github.ref_name}}` is a variable string that is assigned to the tag peremeter. It uses a docker secret contianing my username, '/', a enviormental vairable with my repo name, and the tag that has just been pushed to the github repo. 
+
+# Link to Workflow 
+https://github.com/WSU-kduncan/ceg3120-cicd-Anna-Crafton/blob/main/.github/workflows/build_and_push_to_docker.yml 
+
+
+# Testing & Validating Workflow
+
+To confirm the workflow did it's job, I did the following: 
+1) Pushed a new tag to github to trigger the workflow.
+2) Go to Github's Actions tab and check that the job has been triggered (It should turn green when done. Red means somthing isn't working.)
+3) Open the Dockerhub repo in the browser and refresh the page to confirm the image has been pushed. 
 
 ![image](https://github.com/user-attachments/assets/095b4e43-d564-4cc7-ab69-7b92c13be704)
 
