@@ -90,7 +90,7 @@ I used the instructions on dev.io given in the prject overview to create a conta
 
 ![image](https://github.com/user-attachments/assets/3f491475-c0ff-4875-86cd-b6708a32e01e)
 
-## Public Acess Token How-To Create a Token: 
+# Public Acess Token How-To Create a Token: 
 
 I created a repository by logining in to DockerHub, clicking on 'Repositories' on the left under my username, and selecting the public option when prompted. 
 
@@ -113,10 +113,9 @@ I created a repository by logining in to DockerHub, clicking on 'Repositories' o
   
   3) docker push acrafton21/crafton-ceg3120:latest
 
+## Stuff Done after 2/25
 
 ## Part 2
-
-## Stuff done after 4/25 
 
 # Correct DockerHub Link (from feedback on Porject 4)
   https://hub.docker.com/r/acrafton21/crafton-ceg3120
@@ -247,7 +246,7 @@ Docker public acess key how-to
 
 https://docs.docker.com/security/for-developers/access-tokens/
 
-## Docker and original GitHub Repo Links 
+# Docker and original GitHub Repo Links 
 Original Repository (has commit history) > 
 
 https://github.com/Anna-Crafton/crafton-project4-ceg3121/tree/main 
@@ -258,7 +257,7 @@ Link to the DockerHub Repository I Used for this Project >
 https://hub.docker.com/repository/docker/acrafton21/crafton-ceg3120/general
 
 
-# NOTES / Unfinished: 
+## NOTES / Unfinished: 
 
 Part 2 Manually Setting Up a Container is Missing
 Part 3 is Missing Diagram 
