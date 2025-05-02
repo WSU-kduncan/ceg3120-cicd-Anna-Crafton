@@ -255,25 +255,13 @@ https://github.com/Anna-Crafton/crafton-project4-ceg3121/tree/main
 
 Link to the DockerHub Repository I Used for this Project > 
 
-  https://hub.docker.com/repository/docker/acrafton21/crafton-ceg3120/general
+https://hub.docker.com/repository/docker/acrafton21/crafton-ceg3120/general
 
 
-# NOTES: 
+# NOTES / Unfinished: 
 
-Part 2 point 2 is not done or working. 
-
-
-
-
-
-
-
-
-
-
-
-
-Test for github 
+Part 2 Manually Setting Up a Container is Missing
+Part 3 is Missing Diagram 
 
 
 
