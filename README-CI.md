@@ -101,11 +101,14 @@ I used DockerHub's instructions for making a Public Acess Key. (https://docs.doc
 
   1) Avatar (in top right) > Account Settings > Personal Acess Tokens > Generate New Token
      
-  3) Fill out the decription, experation date, etc when prompted.
+  2) Fill out the decription, experation date, etc when prompted.
      - At first, I gave myself read and write permisions, since I will likely be using this to add stuff to the repo and will want to pull from the repo.
-       However, I ran into an error while trying to push an image to dockerhub later on, and ended up making a new token with all permisions. 
+       However, I ran into an error while trying to push an image to dockerhub later on, and ended up making a new token with all permisions.
+
+       UPDATE: The scope should be only write permissions, since the workflow is only writing to dockerhub and is not being used to remover or run containers. 
        
-  4) COPY THE TOKEN AND SAVE IT! It will dissapear once the page is closed. 
+  3) COPY THE TOKEN AND SAVE IT! It will dissapear once the page is closed.
+
 
 # How to Use a Token to Push an Image to DockerHub:
 
@@ -154,13 +157,13 @@ To build the image, In a directory with my Dockerfile and angular-site, I did
 
 # Action Secret How to: 
 
-Created token same as before. 
+Created a public acccess token. (described above in Token How-To section)
 
-Settings at middle top right, (not the ones under profile, the ones just for the repo)
-'secrets and variabes' tab on the bottom left, then 'Actions' > new repository secret. 
-Entre a name. 
+In Github, navigate to settings at the middle top right, (not the ones under profile, the ones just for the repo)
+Click on the 'secrets and variabes' tab on the bottom left, then 'Actions'. Go to 'new repository secret'. 
+Enter a name for the token. (DOCKER_USERNAME / DOCKER_TOKEN)
 
-Value for DOCKER_TOKEN is the Token password from earlier, and DOCKER_USERNAME is Dockerhub username.
+The value for DOCKER_TOKEN should be the Token password from earlier, and DOCKER_USERNAME is Dockerhub username.
 
 # Github > Docker Workflow How-To:
 
