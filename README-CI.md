@@ -13,8 +13,7 @@ Note: I already had an older version of docker installed for a previous project,
 
 # Running a Docker Container:
 
-To make sure everthing was working, I ran a pre-existing hello-world container. I used instructions from https://www.geeksforgeeks.org/docker-hello-world/, which had me
-pull the continer and then run it. 
+To make sure everthing was working, I ran a pre-existing hello-world container. I used instructions from https://www.geeksforgeeks.org/docker-hello-world/, which had me pull the continer and then run it. 
 
   `docker pull hello-world`
   `docker run hello-world`
@@ -91,13 +90,9 @@ I used the instructions on dev.io given in the prject overview to create a conta
 
 ![image](https://github.com/user-attachments/assets/3f491475-c0ff-4875-86cd-b6708a32e01e)
 
-## Public Acess Token How-To: 
+## Public Acess Token How-To Create a Token: 
 
 I created a repository by logining in to DockerHub, clicking on 'Repositories' on the left under my username, and selecting the public option when prompted. 
-
-I used DockerHub's instructions for making a Public Acess Key. (https://docs.docker.com/security/for-developers/access-tokens/)
-
-# How to Create a Token: 
 
   1) Avatar (in top right) > Account Settings > Personal Acess Tokens > Generate New Token
      
@@ -118,25 +113,8 @@ I used DockerHub's instructions for making a Public Acess Key. (https://docs.doc
   
   3) docker push acrafton21/crafton-ceg3120:latest
 
-Links > 
-https://medium.com/@komalminhas.96/a-step-by-step-guide-to-build-and-push-your-own-docker-images-to-dockerhub-709963d4a8bc 
-Article that explains how to tag an image and push it to DockerHub. 
-https://docs.docker.com/reference/cli/docker/image/push/
-DockerHub how to push an image to DockerHub
 
-
-# Link to the DockerHub Repository I Used for this Project > 
-  https://hub.docker.com/repository/docker/acrafton21/crafton-ceg3120/general
-
-## PART 2
-
-
-Parts 2 and 3 are not completed. 
-
-## Original Repository (has commit history) > 
-
-https://github.com/Anna-Crafton/crafton-project4-ceg3121/tree/main 
-
+## Part 2
 
 ## Stuff done after 4/25 
 
@@ -206,7 +184,7 @@ tags:
 `runs-on: ubuntu-latest` lists the type of runner used.
 
 
-`steps:` lists a bunch of smaller pieces in the job. 
+`steps:` lists a bunch of smaller pieces in the job. Steps are completed in order, one at a time. 
 
 
 'Checkout repo to runner' is a step that calls an action to clone the repo to the runner.
@@ -241,6 +219,48 @@ To confirm the workflow did it's job, I did the following:
 
 ![image](https://github.com/user-attachments/assets/095b4e43-d564-4cc7-ab69-7b92c13be704)
 
+
+
+## Part 3
+
+
+
+# Sources: 
+
+
+Article that explains how to tag an image and push it to DockerHub. 
+
+https://medium.com/@komalminhas.96/a-step-by-step-guide-to-build-and-push-your-own-docker-images-to-dockerhub-709963d4a8bc 
+
+
+DockerHub how to push an image to DockerHub
+
+https://docs.docker.com/reference/cli/docker/image/push/
+
+
+helo-world docker container explanation 
+
+https://www.geeksforgeeks.org/docker-hello-world/
+
+
+Docker public acess key how-to
+
+https://docs.docker.com/security/for-developers/access-tokens/
+
+## Docker and original GitHub Repo Links 
+Original Repository (has commit history) > 
+
+https://github.com/Anna-Crafton/crafton-project4-ceg3121/tree/main 
+
+
+Link to the DockerHub Repository I Used for this Project > 
+
+  https://hub.docker.com/repository/docker/acrafton21/crafton-ceg3120/general
+
+
+# NOTES: 
+
+Part 2 point 2 is not done or working. 
 
 
 
