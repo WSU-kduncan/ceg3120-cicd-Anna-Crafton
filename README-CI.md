@@ -205,10 +205,6 @@ tags:
 
 To use the workflow in a diffeerent github repo, you would need to set new github action secrets with the same variable names (DOKCER_USERNAME, DOCKER_TOKEN). To push to a different DOckerhub repo, you would need to change the value of DOCKER_HUB_REPO in the workflow  to the name of the new dokcerhub repo.
 
-# Link to Workflow 
-https://github.com/WSU-kduncan/ceg3120-cicd-Anna-Crafton/blob/main/.github/workflows/build_and_push_to_docker.yml 
-
-
 # Testing & Validating Workflow
 
 To confirm the workflow did it's job, I did the following: 
@@ -246,7 +242,7 @@ Docker public acess key how-to
 
 https://docs.docker.com/security/for-developers/access-tokens/
 
-# Docker and original GitHub Repo Links 
+# Docker, Workflow, and original GitHub Repo Links 
 Original Repository (has commit history) > 
 
 https://github.com/Anna-Crafton/crafton-project4-ceg3121/tree/main 
@@ -255,6 +251,11 @@ https://github.com/Anna-Crafton/crafton-project4-ceg3121/tree/main
 Link to the DockerHub Repository I Used for this Project > 
 
 https://hub.docker.com/repository/docker/acrafton21/crafton-ceg3120/general
+
+
+Link to Workflow > 
+
+https://github.com/WSU-kduncan/ceg3120-cicd-Anna-Crafton/blob/main/.github/workflows/build_and_push_to_docker.yml 
 
 
 ## NOTES / Unfinished: 
