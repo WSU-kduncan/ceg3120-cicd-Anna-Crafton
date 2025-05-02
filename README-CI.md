@@ -1,6 +1,6 @@
 ## crafton-project4-ceg3121
 
-## PART 1
+## Part 1
 
 # Docker Installation How-To:
 
